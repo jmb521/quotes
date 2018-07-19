@@ -1,24 +1,20 @@
-import React, {Component} from 'react'
+import React from 'react'
 
 
 
-class Search extends Component {
-  submitForm = (e) => {
-    console.log(e)
-  }
+const Search = (props) => {
 
-  render() {
+
     return(
       <div>
-      <form onsubmit="submitForm()">
+      <form onSubmit={props.submitForm}>
         <label>Search</label>
         <br />
-        <input type="text" name="search_term" />
-        <br />
-        <input type="submit" name="Search" />
+        <input type="text" name="search_term" value={props.value} onChange={props.handleOnChange}/>
+        <input type="submit" name="Submit" value="Search"/>
       </form>
     </div>
-  )}
+  )
 
 
 }
