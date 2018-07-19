@@ -1,17 +1,20 @@
 import React from 'react'
 
-class Filter extends Component {
-  render() {
-    return(
 
-      <form onsubmit="filterQuotes">
-        <select>
-          <option name="games">Games</option>
-          <option name="movies">Movies</option>
-          </select>
-      </form>
+
+
+const Filter = (props) => {
+    return(
+      <div>
+        <select onChange={props.filterquote}>
+          <option name="" value=""></option>
+          <option name="games" value="games">Games</option>
+          <option name="movies" value="movies">Movies</option>
+        </select>
+
+      </div>
     )
-  }
+
 }
 
 export default Filter
