@@ -1,10 +1,6 @@
 import React from 'react'
 
-
-
 const Search = (props) => {
-
-
     return(
       <div>
       <form onSubmit={props.submitForm}>
@@ -15,8 +11,6 @@ const Search = (props) => {
       </form>
     </div>
   )
-
-
 }
 
 export default Search
