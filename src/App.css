@@ -8,3 +8,21 @@ td {
   padding: 10px;
   text-align: center;
 }
+select {
+  width: 200px;
+  text-align: center;
+  font-size: large;
+}
+input {
+  padding-right: 5px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+
+}
+li {
+  padding-right: 15px;
+  color: blue;
+}
