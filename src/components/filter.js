@@ -1,8 +1,5 @@
 import React from 'react'
 
-
-
-
 const Filter = (props) => {
     return(
       <div>
@@ -14,7 +11,6 @@ const Filter = (props) => {
 
       </div>
     )
-
 }
 
 export default Filter
