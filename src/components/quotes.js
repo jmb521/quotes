@@ -30,20 +30,15 @@ class Quotes extends Component {
         return response.json();
       })
       .then(data => this.setQuote(data))
-
   }
 
   submitForm = (e) =>  {
     e.preventDefault()
     this.searchQuotes()
-
   }
 
   searchQuotes = () => {
     const filtered = this.state.allquotes.filter((q) => {
-      // console.log(q.quote)
-      // console.log(this.state.search)
-      // debugger
       if(q.quote.includes(this.state.search)) {
         return q
       }
@@ -57,12 +52,6 @@ class Quotes extends Component {
     })
     return filtered
   }
-  // updateSearchState = (match) => {
-  //   this.setState({
-  //     quotes: match
-  //   })
-  // }
-
 
   handleOnChange = (event) => {
     this.setState({
@@ -71,7 +60,6 @@ class Quotes extends Component {
   }
 
   filterQuotes = (e) => {
-
     if(e.target.value === "") {
       this.setState({
         quotes: this.state.allquotes
@@ -88,23 +76,15 @@ class Quotes extends Component {
         quotes: this.state.allquotes.filter(f => f.theme === "movies"),
         currentPage: 1,
       })
-
     }
-
   }
 
-
-    handleClick = (event) => {
+  handleClick = (event) => {
     this.setState({
       currentPage: Number(event.target.id)
     });
-
   }
-  // componentDidUpdate(prevProps) {
-  //   if("game"!== prevProps.theme) {
-  //     console.log("pp", prevProps)
-  //   }
-  // }
+
   allQuotes = () =>  {
     this.setState({
       quotes: this.state.allquotes
@@ -122,21 +102,11 @@ class Quotes extends Component {
       })
     }
 
-
-
-
-
-
-  //   const renderTodos = currentTodos.map((todo, index) => {
-  //    return <li key={index}>{todo}</li>;
-  //  });
-   //
-  //  // Logic for displaying page numbers
    const pageNumbers = [];
    for (let i = 1; i <= Math.ceil(this.state.quotes.length / this.state.quotesPerPage); i++) {
      pageNumbers.push(i);
    }
-   //
+
    const renderPageNumbers = pageNumbers.map(number => {
      return (
        <li
@@ -149,9 +119,6 @@ class Quotes extends Component {
      );
    });
 
-
-
-
     return(
       <div>
       <br />
@@ -162,14 +129,13 @@ class Quotes extends Component {
         <table>
         <thead>
         <tr>
-
           <th>Quote</th>
           <th>Context</th>
           <th>Source</th>
           <th>Theme</th>
-
-          </tr>
-          </thead>
+        </tr>
+        </thead>
+        
         <Showquotes />
         </table>
         <ul id="page-numbers">
